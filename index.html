@@ -20,7 +20,7 @@
             </div>
             <div class="bg-red-200 p-4 rounded-2xl">
                 <p>Rejected</p>
-                <p class="rejectedCount">0</p>
+                <p id="rejectedCount">0</p>
             </div>
         </div>
     </header>
@@ -34,10 +34,19 @@
     </div>
 
     <div class="mb-6">
-        <button class="bg-blue-500 text-white px-5 py-2 " id="all-filter-btn">All</button>
-        <button class="bg-gray-300 px-5 py-2" id="interview-filter-btn">Interview</button>
-        <button class="bg-gray-300 px-5 py-2" id="rejected-filter-btn">Rejected</button>
+        <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-500 text-white px-5 py-2 " id="all-filter-btn">All</button>
+        <button onclick="toggleStyle('interview-filter-btn')"  class="bg-gray-300 px-5 py-2" id="interview-filter-btn">Interview</button>
+        <button onclick="toggleStyle('rejected-filter-btn')"  class="bg-gray-300 px-5 py-2" id="rejected-filter-btn">Rejected</button>
     </div>
+
+    <section id="filtered-section" class="hidden">
+
+
+    </section>
+
+
+
+
     <section id="allcards" class="space-y-6">
         <!-- card 1 -->
          <div class="card flex justify-between border-2 p-8">
@@ -61,8 +70,8 @@ Full-time
                  <p class="status">Not Applied</p>
                  <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                  <div class="flex gap-8">
-                    <button class="interview-btn text-emerald-500 border-2 px-4 py-2">INTERVIEW</button>
-                    <button class="rejected-btn text-red-500 border-2 px-4 py-2">REJECTED</button>
+                    <button class="interview-btn text-emerald-500 font-semibold border-2 px-4 py-2">INTERVIEW</button>
+                    <button class="rejected-btn text-red-500 font-semibold border-2 px-4 py-2">REJECTED</button>
                  </div>
             </div>
             <!-- main part 2 -->
